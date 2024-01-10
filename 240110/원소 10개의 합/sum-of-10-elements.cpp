@@ -2,19 +2,20 @@
 using namespace std;
 
 int main() {
+    // 10개의 원소 입력 받기
+    int arr[10];
+    for (int i = 0; i < 10; ++i) {
+        cin >> arr[i];
+    }
 
-	int val[10];
-	
-	int n;
-	cin >> n;
+    // 원소의 합 계산
+    int sum = 0;
+    for (int i = 0; i < 10; ++i) {
+        sum += arr[i];
+    }
 
-	int result = 1;
+    // 결과 출력
+    cout << sum << endl;
 
-	for (int i = 0; i < 10; ++i)
-	{
-		cin >> val[i];
-		result += val[i];
-	}
-
-	cout << result;
+    return 0;
 }
