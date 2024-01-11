@@ -18,7 +18,7 @@ int main() {
         break;
     case '/':
         if (c != 0) {
-            std::cout << a << " / " << c << " = " << static_cast<double>(a) / c << std::endl;
+            std::cout << a << " / " << c << " = " << static_cast<int>(a) / c << std::endl;
         }
         break;
     }
