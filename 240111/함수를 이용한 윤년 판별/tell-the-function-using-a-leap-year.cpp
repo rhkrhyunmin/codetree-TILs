@@ -16,7 +16,15 @@ int main() {
 
     bool result = isLeapYear(y);
 
-    std::cout  << result << std::endl;
+    if (result == 1)
+    {
+        std::cout << "true";
+    }
+    else {
+        std::cout << "false";
+    }
+
+    //std::cout  << result << std::endl;
 
     return 0;
 }
