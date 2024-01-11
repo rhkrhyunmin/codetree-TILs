@@ -22,7 +22,7 @@ int main() {
         }
         break;
     default:
-        std::cout << "false";
+        std::cout << "False";
     }
     return 0;
 }
