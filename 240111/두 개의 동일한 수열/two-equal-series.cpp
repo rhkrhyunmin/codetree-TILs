@@ -2,30 +2,33 @@
 #include <vector>
 #include <algorithm>
 
-using namespace std;
-
 int main() {
-    int n, k;
-    std::cin >> n >> k;
+    int n;
 
-    vector<int> num1(n);
-    vector<int> num2(n);
+    std::cin >> n;
+
+    std::vector<int> sequenceA(n);
+    std::vector<int> sequenceB(n);
+
 
     for (int i = 0; i < n; ++i) {
-        cin >> num1[i];
-        cin >> num2[i];
+        std::cin >> sequenceA[i];
     }
 
-    sort(num1.begin(), num1.end());
-    sort(num2.begin(), num2.end());
 
-    if (num1[n] == num2[n])
-    {
-        cout << "Yes";
+    for (int i = 0; i < n; ++i) {
+        std::cin >> sequenceB[i];
     }
 
+
+    std::sort(sequenceA.begin(), sequenceA.end());
+    std::sort(sequenceB.begin(), sequenceB.end());
+
+    if (sequenceA == sequenceB) {
+        std::cout << "Yes" << std::endl;
+    }
     else {
-        cout << "No";
+        std::cout << "No" << std::endl;
     }
 
     return 0;
