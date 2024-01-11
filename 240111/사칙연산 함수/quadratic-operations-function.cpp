@@ -21,6 +21,8 @@ int main() {
             std::cout << a << " / " << c << " = " << static_cast<int>(a) / c << std::endl;
         }
         break;
+    default:
+        std::cout << "false";
     }
     return 0;
 }
