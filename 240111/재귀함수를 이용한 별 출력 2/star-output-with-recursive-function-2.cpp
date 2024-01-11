@@ -30,8 +30,6 @@ void printReverseTriangle(int n) {
 int main() {
     int N;
 
-    // 입력 받기
-    std::cout << "Enter an integer N: ";
     std::cin >> N;
 
     // 삼각형 출력
