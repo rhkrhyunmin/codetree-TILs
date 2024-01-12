@@ -20,6 +20,10 @@ void DFS(int x, int y) {
         int ny = y + dy[i];
         int nx = x + dx[i];
         // 아직 간선이 존재하고 방문한 적이 없는 정점에 대해서만 탐색을 진행합니다.
+        if (ny >= 0 && ny < n && nx >= 0 && nx < n)
+        {
+            continue;
+        }
         if (graph[ny][nx] == 1 && !visited[ny][nx]) {
             visited[ny][nx] = true;
 
@@ -33,19 +37,21 @@ int main() {
     cin >> n >> m;
 
     int v1, v2;
-    for (int i = 0; i < m; i++) {
-        // 각 정점이 서로 이동이 가능한 양방향 그래프이기 때문에
-        // 각 정점에 대한 간선을 각각 저장해줍니다.
-        cin >> v1 >> v2;
-        graph[v1][v2] = 1;
-        graph[v2][v1] = 1;
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++)
+        {
+            // 각 정점이 서로 이동이 가능한 양방향 그래프이기 때문에
+            // 각 정점에 대한 간선을 각각 저장해줍니다.
+            cin >> graph[i][j];
+
+        }
     }
 
     // DFS 시작
     visited[0][0] = true;
     DFS(0,0);
 
-    cout << visited[n-1][n-1];
+    cout << visited[n-1][m-1];
 
     return 0;
 }
