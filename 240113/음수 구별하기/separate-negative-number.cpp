@@ -8,7 +8,7 @@ int main() {
 
     if(n < 0)
     {
-        cout << n;
+        cout << n << endl;
         cout << "minus";
     }
     else{
