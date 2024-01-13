@@ -6,10 +6,11 @@ int main() {
 
     if(n < 0)
     {
+        cout << n;
         cout << "minus";
     }
     else{
-        cout << n
+        cout << n;
     }
     return 0;
 }
