@@ -3,8 +3,7 @@
 
 int main() {
     // 사용자로부터 입력 받기
-    double a;
-    std::cin >> a;
+    double a = 25.43;
 
     // 입력받은 값 반올림
     double rounded_a = round(a * 10) / 10;
