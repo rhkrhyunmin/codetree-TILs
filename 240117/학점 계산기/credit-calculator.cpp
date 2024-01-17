@@ -31,7 +31,7 @@ int main() {
     } else if (average >= 3.0) {
         cout << "Good" << endl;
     } else if (average >= 2.0) {
-        cout << "Average" << endl;
+        cout << "Poor" << endl;
     } else {
         cout << "Poor" << endl;
     }
