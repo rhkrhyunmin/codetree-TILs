@@ -27,7 +27,7 @@ int main() {
 
     // 등급 출력
     if (average >= 4.0) {
-        cout << "A" << endl;
+        cout << "Perfect" << endl;
     } else if (average >= 3.0) {
         cout << "Good" << endl;
     } else if (average >= 2.0) {
