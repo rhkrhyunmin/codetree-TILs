@@ -33,7 +33,7 @@ int main() {
     } else if (average >= 2.0) {
         cout << "Average" << endl;
     } else {
-        cout << "Fail" << endl;
+        cout << "Poor" << endl;
     }
 
     return 0;
