@@ -1,7 +1,6 @@
 #include <iostream>
 #include <vector>
 #include <queue>
-#include <algorithm>
 
 using namespace std;
 
@@ -16,11 +15,10 @@ int main() {
         int num;
         cin >> num;
         numbers.push_back(num);
-
         minHeap.push(num);
 
         // 현재까지의 숫자가 3개보다 많으면 가장 작은 수를 제거
-        if (minHeap.size() > 3) {
+        while (minHeap.size() > 3) {
             minHeap.pop();
         }
 
