@@ -16,9 +16,10 @@ int main() {
 
         if (numbers.size() >= 3) {
             // 현재까지 주어진 숫자 중 가장 작은 3개의 숫자 찾기
-            std::sort(numbers.begin(), numbers.end());
-            int product = numbers[0] * numbers[1] * numbers[2];
-            
+            std::vector<int> smallestThree(numbers);
+            std::sort(smallestThree.begin(), smallestThree.end());
+
+            int product = smallestThree[0] * smallestThree[1] * smallestThree[2];
             std::cout << product << std::endl;
         } else {
             // 주어진 숫자의 수가 3개 미만인 경우
