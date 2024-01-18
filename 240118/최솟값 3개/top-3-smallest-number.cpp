@@ -9,26 +9,27 @@ int main() {
     cin >> n;
 
     vector<int> numbers;
-    priority_queue<int, vector<int>, greater<int>> minHeap;
+    priority_queue<int> maxHeap; // 최대 힙을 사용하여 최솟값 3개를 유지
 
     for (int i = 0; i < n; ++i) {
         int num;
         cin >> num;
         numbers.push_back(num);
-        minHeap.push(num);
 
-        // 현재까지의 숫자가 3개보다 많으면 가장 작은 수를 제거
-        while (minHeap.size() > 3) {
-            minHeap.pop();
+        maxHeap.push(num);
+
+        // 최대 힙이 3개 이상의 요소를 가지면 가장 큰 값을 제거
+        while (maxHeap.size() > 3) {
+            maxHeap.pop();
         }
 
-        // 아직 3개의 숫자가 채워지지 않았으면 -1 출력
-        if (minHeap.size() < 3) {
+        // 아직 3개의 숫자가 주어지지 않았다면 -1을 출력
+        if (maxHeap.size() < 3) {
             cout << "-1" << endl;
         } else {
-            // 가장 작은 3개의 숫자의 곱 출력
+            // 최솟값 3개의 곱을 출력
             long long product = 1;
-            priority_queue<int, vector<int>, greater<int>> tempHeap = minHeap;
+            priority_queue<int> tempHeap = maxHeap;
             while (!tempHeap.empty()) {
                 product *= tempHeap.top();
                 tempHeap.pop();
