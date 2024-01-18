@@ -27,7 +27,7 @@ int main()
 
 		if (avarage >= 60)
 		{
-			cout << "Pass" << endl;
+			cout << "pass" << endl;
 			count++;
 		}
 		else {
