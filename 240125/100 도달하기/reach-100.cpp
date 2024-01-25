@@ -21,7 +21,7 @@ int main() {
     // 세 번째 항부터 계산하여 출력
     while (true) {
         int nextTerm = firstTerm + secondTerm;
-        if (nextTerm > 198) {
+        if (nextTerm > 180) {
             break; // 100을 넘으면 종료
         }
 
