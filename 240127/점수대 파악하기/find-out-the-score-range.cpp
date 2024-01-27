@@ -21,7 +21,7 @@ int main() {
     }
 
     // 각 점수대별 학생 수 출력
-    for (int i = 1; i < 11; ++i) {
+    for (int i = 10; i > 0; --i) {
         cout << i * 10 << " - " << scoreCounts[i] << endl;
     }
 
