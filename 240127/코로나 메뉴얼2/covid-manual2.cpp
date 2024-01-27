@@ -42,7 +42,7 @@ int main() {
     }
     else {
         // 각 진료소에 보내지는 인원 출력
-        cout << countA << " " << countB << " " << countC << " " << countD << " " << countE;
+        cout << countA << " " << countB << " " << countC << " " << countD << " ";
     }
 
     
