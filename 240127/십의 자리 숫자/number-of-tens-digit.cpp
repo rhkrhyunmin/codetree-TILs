@@ -21,7 +21,7 @@ int main() {
     // 각 십의 자리 숫자의 개수 출력
     for (int i = 1; i < 10; ++i) {
         if (count[i] > 0) {
-            cout << i << "의 개수: " << count[i] << endl;
+            cout << i << "-" << count[i] << endl;
         }
     }
 
