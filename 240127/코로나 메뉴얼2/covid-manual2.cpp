@@ -22,16 +22,15 @@ int main() {
             // C: 증상 있고 체온 정상
             countC++;
         }
-        // D: 둘 다 괜찮은 경우는 생략
+        // D: 둘 다 괜찮은 경우도 계산
     }
 
-    cout << countA << " " << countB << " " << countC << " ";
+    // 각 진료소에 보내지는 인원 출력
+    cout << countA << " " << countB << " " << countC;
 
     // E: 위급상황인 경우 출력
     if (countA >= 2) {
-        cout << "E";
-    } else {
-        cout << "D";
+        cout << " E";
     }
 
     return 0;
