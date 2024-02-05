@@ -1,24 +1,28 @@
 #include <iostream>
 
-int divideAndCount(int n, int count) {
-    if (n == 1) {
-        return count;
-    }
+using namespace std;
 
-    if (n % 2 == 0) {
-        return divideAndCount(n / 2, count + 1);
-    } else {
-        return divideAndCount(3 * n + 1, count + 1);
-    }
+// n에서 시작하여 1이 되기 위해
+// 거쳐야하는 횟수를 반환하는 함수입니다.
+int GetNum(int n) {
+    // 1이면 더 이상 진행할 작업이 없으므로 0회가 더 필요합니다.
+    if(n == 1)
+        return 0;
+
+    // 짝수라면 2로 나눠 진행했을 때의 횟수 + 1번이 소요됩니다.
+    if(n % 2 == 0)
+        return GetNum(n / 2) + 1;
+    // 홀수라면 3으로 나누었을 때의 몫을 가지고 진행했을 때의 횟수 + 1번
+    // 소요됩니다.
+    else
+        return GetNum(n / 3) + 1;
 }
 
 int main() {
-    int N;
-    std::cin >> N;
+    // 변수 선언 및 입력:
+    int n;
+    cin >> n;
 
-    int result = divideAndCount(N, 0);
-
-    std::cout << result + 1 << std::endl;  // Add 1 to include the final division when n becomes 1
-
+    cout << GetNum(n);
     return 0;
 }
