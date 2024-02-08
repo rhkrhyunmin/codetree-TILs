@@ -37,7 +37,7 @@ int main() {
     }
 
     // 결과 출력
-    cout <<  minAgentName  << minScore << endl;
+    cout <<  minAgentName << " "  << minScore << endl;
 
     return 0;
 }
