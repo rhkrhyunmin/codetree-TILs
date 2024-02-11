@@ -1,7 +1,6 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include <algorithm>
 
 using namespace std;
 
@@ -9,34 +8,34 @@ class Person {
 public:
     string name;
     string address;
-    string id;
+    string city;
 
-    Person(string n, string a, string i) : name(n), address(a), id(i) {}
-
-    // 비교 연산자 오버로딩
-    bool operator<(const Person& other) const {
-        // 이름을 기준으로 비교
-        return name < other.name;
-    }
+    Person(string n, string a, string c) : name(n), address(a), city(c) {}
 };
 
 int main() {
     int n;
     cin >> n;
-    
+
     vector<Person> people;
 
     for (int i = 0; i < n; ++i) {
-        string name, address, id;
-        cin >> name >> id >> address;
-        people.push_back(Person(name, address, id));
+        string name, address, city;
+        cin >> name >> address >> city;
+        people.push_back(Person(name, address, city));
     }
 
-    // 사람들을 이름 기준으로 정렬
-    sort(people.begin(), people.end());
+    Person slowest_person = people[0];
 
-    // 이름이 가장 느린 사람 출력
-    cout << people.back().name << " " << people.back().id << " " << people.back().address << endl;
+    for (int i = 1; i < n; ++i) {
+        if (people[i].name > slowest_person.name) {
+            slowest_person = people[i];
+        }
+    }
+
+    cout << "name " << slowest_person.name << endl;
+    cout << "addr " << slowest_person.address << endl;
+    cout << "city " << slowest_person.city << endl;
 
     return 0;
 }
