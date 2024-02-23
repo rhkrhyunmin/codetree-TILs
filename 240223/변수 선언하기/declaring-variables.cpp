@@ -5,6 +5,6 @@ int main() {
     int a =3;
     char b = 'c';
 
-    cout << a << b;
+    cout << a << endl << b;
     return 0;
 }
